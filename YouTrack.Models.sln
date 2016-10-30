@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTrack.Models", "YouTrack.Models\YouTrack.Models.csproj", "{A32A6217-4A71-44F0-AC52-83E85A45F72C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTrack.Tests", "YouTrack.Tests\YouTrack.Tests.csproj", "{E80C96D6-DD17-4203-8CAD-3535B4344EA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTrack.Web", "YouTrack.Web\YouTrack.Web.csproj", "{DD56B12C-688B-45E2-A4B2-B3BAB9159840}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A32A6217-4A71-44F0-AC52-83E85A45F72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32A6217-4A71-44F0-AC52-83E85A45F72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32A6217-4A71-44F0-AC52-83E85A45F72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32A6217-4A71-44F0-AC52-83E85A45F72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80C96D6-DD17-4203-8CAD-3535B4344EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80C96D6-DD17-4203-8CAD-3535B4344EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80C96D6-DD17-4203-8CAD-3535B4344EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80C96D6-DD17-4203-8CAD-3535B4344EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD56B12C-688B-45E2-A4B2-B3BAB9159840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD56B12C-688B-45E2-A4B2-B3BAB9159840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD56B12C-688B-45E2-A4B2-B3BAB9159840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD56B12C-688B-45E2-A4B2-B3BAB9159840}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
