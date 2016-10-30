@@ -20,8 +20,10 @@ namespace YouTrack.Tests
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
-            if (_mockReposonses.ContainsKey(request.RequestUri))
-                return await Task.FromResult(_mockReposonses[request.RequestUri]);
+            var pathWithoutQueryString = request.RequestUri.GetLeftPart(UriPartial.Path);
+            var uri = new Uri(pathWithoutQueryString);
+            if (_mockReposonses.ContainsKey(uri))
+                return await Task.FromResult(_mockReposonses[uri]);
             return new HttpResponseMessage(HttpStatusCode.NotFound) {RequestMessage = request};
         }
     }

@@ -5,11 +5,11 @@ using System.Net.Http.Headers;
 
 namespace YouTrack.Web
 {
-    public class ClientFactory
+    public class HttpClientFactory
     {
         private readonly HttpMessageHandler _handler;
 
-        public ClientFactory()
+        public HttpClientFactory()
         {
             var cookieContainer = new CookieContainer();
 
@@ -20,7 +20,7 @@ namespace YouTrack.Web
             };
         }
 
-        public ClientFactory(HttpMessageHandler messageHandler)
+        public HttpClientFactory(HttpMessageHandler messageHandler)
         {
             _handler = messageHandler;
         }

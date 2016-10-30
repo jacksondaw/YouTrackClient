@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientFactory.cs" />
+    <Compile Include="HttpClientFactory.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="YouTrackClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -23,17 +23,18 @@ namespace YouTrack.Tests
 
             mockReponseHandler.AddFakeResponse(uri, new HttpResponseMessage(HttpStatusCode.Unauthorized));
 
-            var clientFactory = new ClientFactory(mockReponseHandler);
+            var clientFactory = new HttpClientFactory(mockReponseHandler);
 
             var client = clientFactory.Create(BaseAddress);
 
-            var loginClient = new YouTrackClient(client);
 
             var user = new User
             {
                 Login = "testUser",
                 Password = "password".ToSecureString()
             };
+
+            var loginClient = new YouTrackClient(client, user);
 
             var success = await loginClient.AuthenticateAsync(user);
 
@@ -45,26 +46,20 @@ namespace YouTrack.Tests
         {
             var mockReponseHandler = new MockResponseHandler();
 
-            var stringContent = new StringContent("<login>ok</login>");
+            mockReponseHandler.AddAuthenticationResponseHandler(BaseAddress);
 
-            var uri = new Uri($"{BaseAddress}{YoutrackDirectory.Authentication}");
-
-            mockReponseHandler.AddFakeResponse(uri, new HttpResponseMessage(HttpStatusCode.Accepted)
-            {
-                Content = stringContent
-            });
-
-            var clientFactory = new ClientFactory(mockReponseHandler);
+            var clientFactory = new HttpClientFactory(mockReponseHandler);
 
             var client = clientFactory.Create(BaseAddress);
 
-            var loginClient = new YouTrackClient(client);
 
             var user = new User
             {
                 Login = "testUser",
                 Password = "password".ToSecureString()
             };
+
+            var loginClient = new YouTrackClient(client, user);
 
             var success = await loginClient.AuthenticateAsync(user);
 
