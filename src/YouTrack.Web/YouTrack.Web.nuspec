@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>YouTrackClient</id>
+    <version>1.0.0</version>
+    <title>YouTrackClient</title>
+    <authors>Jack Dawson</authors>
+    <owners>turtlebat</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/turtlebat/YouTrackClient</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple async YouTrack REST client</description>
+    <releaseNotes>Initial Release. Only Issue Creation Supported</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>YouTrack</tags>
+  </metadata>
+</package>
