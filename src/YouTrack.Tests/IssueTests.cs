@@ -69,7 +69,7 @@ namespace YouTrack.Tests
 
             messageHandler.AddFakeResponse(uri, new HttpResponseMessage(HttpStatusCode.Accepted));
 
-            var clientFactory = new HttpClientFactory();
+            var clientFactory = new HttpClientFactory(messageHandler);
 
             var client = clientFactory.Create(BaseAddress);
 
