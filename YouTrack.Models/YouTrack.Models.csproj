@@ -42,12 +42,16 @@
   <ItemGroup>
     <Compile Include="Attachment.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Field.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Issue.cs" />
     <Compile Include="IssueLinkTypes.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="Serialization\XmlAttributeElementDeserializer.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlAttributeElement.cs" />
+    <Compile Include="XmlAttributeElementAttribute.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

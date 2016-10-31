@@ -49,9 +49,11 @@
     <Compile Include="LoginTests.cs" />
     <Compile Include="MockResponseHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestIssue.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YouTrack.Models\YouTrack.Models.csproj">
@@ -62,6 +64,11 @@
       <Project>{dd56b12c-688b-45e2-a4b2-b3bab9159840}</Project>
       <Name>YouTrack.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestIssue.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

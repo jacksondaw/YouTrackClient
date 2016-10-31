@@ -25,8 +25,24 @@ namespace YouTrack.Web
 
             var request = $"{YoutrackDirectory.Issues}?{queryString}";
             var content = new MultipartFormDataContent();
+
+            if (issue.Attachments != null)
+                foreach (var attachment in issue.Attachments)
+                {
+                    var byteArrayContent = new ByteArrayContent(attachment.File, 0, attachment.File.Length);
+                    content.Add(byteArrayContent, attachment.FileName);
+                }
+
             await _client.Put(request, content);
         }
+
+
+        public async Task GetAsync(string issueId)
+        {
+            var request = $"{YoutrackDirectory.Issues}/{issueId}";
+            await _client.GetAsync<Issue>(request);
+        }
+
 
         private string GetQueryString(Issue issue)
         {
@@ -80,7 +96,7 @@ namespace YouTrack.Web
         public async Task<T> GetAsync<T>(string path)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, path);
-
+            
             await EnsureAuthenticated(request);
 
             var postResult = await _httpClient.SendAsync(request);

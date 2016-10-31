@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<issue id="HBR-63">
+  <field name="attachments">
+    <value url="/_persistent/uploadFile.html?file=45-46&amp;v=0&amp;c=true">uploadFile.html</value>
+  </field>
+  <comment id="42-306" author="root" issueId="HBR-63" deleted="false" text="comment 1!" shownForIssueAuthor="false"
+           created="1267030230127">
+    <replies/>
+  </comment>
+  <comment id="42-307" author="root" issueId="HBR-63" deleted="false" text="comment 2?" shownForIssueAuthor="false"
+           created="1267030238721" updated="1267030230127">
+    <replies/>
+  </comment>
+  <field name="Priority">
+    <value>Normal</value>
+  </field>
+  <field name="Type">
+    <value>Bug</value>
+  </field>
+  <field name="State">
+    <value>Won't fix</value>
+  </field>
+  <field name="Assignee">
+    <value>beto</value>
+  </field>
+  <field name="Subsystem">
+    <value>Configuration</value>
+  </field>
+  <field name="Fix versions">
+    <value>2.0</value>
+    <value>2.0.5</value>
+    <value>2.0.7</value>
+  </field>
+  <field name="cf">
+    <value>0</value>
+    <value>!</value>
+  </field>
+  <field name="scf">
+    <value>1265835603000</value>
+  </field>
+  <field name="links">
+    <value type="Depend" role="depends on">HBR-62</value>
+    <value type="Duplicate" role="duplicates">HBR-57</value>
+    <value type="Duplicate" role="is duplicated by">HBR-54</value>
+    <value type="Relates" role="relates to">HBR-49</value>
+    <value type="Relates" role="is related to">HBR-51</value>
+    <value type="Depend" role="is required for">HBR-49</value>
+  </field>
+  <field name="projectShortName">
+    <value>HBR</value>
+  </field>
+  <field name="numberInProject">
+    <value>63</value>
+  </field>
+  <field name="summary">
+    <value>summary</value>
+  </field>
+  <field name="description">
+    <value>description</value>
+  </field>
+  <field name="created">
+    <value>1262171005630</value>
+  </field>
+  <field name="updated">
+    <value>1267630833573</value>
+  </field>
+  <field name="updaterName">
+    <value>root</value>
+  </field>
+  <field name="resolved">
+    <value>1267030108251</value>
+  </field>
+  <field name="reporterName">
+    <value>root</value>
+  </field>
+  <field name="commentsCount">
+    <value>2</value>
+  </field>
+  <field name="votes">
+    <value>0</value>
+  </field>
+</issue>
