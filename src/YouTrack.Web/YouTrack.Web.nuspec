@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>YouTrackClient</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>YouTrackClient</title>
     <authors>Jack Dawson</authors>
     <owners>turtlebat</owners>
