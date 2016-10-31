@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Xml.Serialization;
+using YouTrack.Models.Extensions;
 
 namespace YouTrack.Models.Serialization
 {
@@ -55,7 +57,74 @@ namespace YouTrack.Models.Serialization
             if (valueNode == null) return;
 
             var property = _elementAttributeProperties[tuple];
-            property.SetValue(xmlElementEventArgs.ObjectBeingDeserialized, valueNode.InnerText);
+            SetProperty(property, xmlElementEventArgs.ObjectBeingDeserialized, valueNode.InnerText);
+        }
+
+        private void SetProperty(PropertyInfo property, object target, string value)
+        {
+            if (property.PropertyType == typeof(string))
+            {
+                property.SetValue(target, value);
+                return;
+            }
+            if (property.PropertyType == typeof(int))
+            {
+                int i;
+
+                var success = int.TryParse(value, out i);
+
+                if (!success) return;
+
+                property.SetValue(target, i);
+                return;
+            }
+            if (property.PropertyType == typeof(long))
+            {
+                long i;
+
+                var success = long.TryParse(value, out i);
+
+                if (!success) return;
+
+                property.SetValue(target, i);
+                return;
+            }
+            if (property.PropertyType == typeof(short))
+            {
+                short i;
+
+                var success = short.TryParse(value, out i);
+
+                if (!success) return;
+
+                property.SetValue(target, i);
+                return;
+            }
+            if (property.PropertyType == typeof(DateTime))
+            {
+                DateTime dateTime;
+
+                var success = DateTime.TryParse(value, out dateTime);
+
+                if (success)
+                {
+
+                    property.SetValue(target, dateTime);
+                    return;
+                }
+                long i;
+
+                var tryLong = long.TryParse(value, out i);
+
+                if (!tryLong) return;
+
+                dateTime = i.ConvertToDateTime();
+                
+                property.SetValue(target, dateTime);
+
+                return;
+            }
+
         }
     }
 }

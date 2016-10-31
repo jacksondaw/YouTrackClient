@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attachment.cs" />
+    <Compile Include="Extensions\DateTimExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="Group.cs" />
