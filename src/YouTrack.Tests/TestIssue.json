@@ -5,7 +5,7 @@
   "field": [
     {
       "name": "projectShortName",
-      "value": "PRIMA"
+      "value": "Test"
     },
     {
       "name": "numberInProject",
@@ -13,11 +13,11 @@
     },
     {
       "name": "summary",
-      "value": "Create a Transcriptionist App "
+      "value": "Create a App "
     },
     {
       "name": "description",
-      "value": "The Transcriptionist enters diagnoses for one or more Pathologists. They are typically handed a piece of paper with the Pathologist's notes, enter in the information, print a report that the Pathologist reviews, and closes the case after the Pathologist okays the report.\n\nWe should essentially steal the Pathologist shell vm for starts.\nThey will need a search box for cases and a drop-down of Pathologists to select for whom they are entering the diagnosis.\nUpon selecting a case, they will need a list of slide diagnoses, followed by the case diagnoses.\nThey will need to be able to:\n - Save the case\n - Print, Save, etc. the Report (identical to what is currently at Pathologist)\n - As a secondary task (for us), they should be able to edit case demographics (e.g. add a mouse strain, if one was not entered at Accession)"
+      "value": "Do stuff and make stuff"
     },
     {
       "name": "created",
@@ -29,19 +29,19 @@
     },
     {
       "name": "updaterName",
-      "value": "nate"
+      "value": "test"
     },
     {
       "name": "updaterFullName",
-      "value": "Nathan Barnett"
+      "value": "Testy Tester"
     },
     {
       "name": "reporterName",
-      "value": "nate"
+      "value": "test"
     },
     {
       "name": "reporterFullName",
-      "value": "Nathan Barnett"
+      "value": "Testy Tester"
     },
     {
       "name": "commentsCount",
